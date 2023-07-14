@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  color-scheme: dark light;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  box-shadow: 0px 0px 500px rgba(15, 206, 149, 0.5);
+}
+
+.displayArea {
+  background-color: rgb(15, 206, 149);
+  height: 125px;
+  font-size: 50px;
+  display: flex;
+  text-align: end;
+  align-items: center;
+  padding-right: 20px;
+}
+
+#numDisplay{
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse ;
+  text-align: center;
+}
+
+td {
+  height: 125px;
+  width: 125px;
+  font-size: 65px;
+}
+
+button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}

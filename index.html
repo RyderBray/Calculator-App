@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Calculator App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="displayArea">
+                <p id="numDisplay">125</p>
+            </div>
+            <table class="calcButtons">
+                <tbody>
+                <tr>
+                    <td><button id="cancel">c</button></td><td><button id="backspace" >⌫</button></td>
+                    <td><button id="percent">%</button></td><td><button id="divide">÷</button></td>
+                </tr>
+                <tr>
+                    <td><button id="seven">7</button></td><td><button id="eight">8</button></td>
+                    <td><button id="nine">9</button></td><td><button id="multiply">x</button></td>
+                </tr>
+                <tr>
+                    <td><button id="four">4</button></td><td><button id="five">5</button></td>
+                    <td><button id="six">6</button></td><td><button id="minus">-</button></td>
+                </tr> 
+                <tr>
+                    <td><button id="one">1</button></td><td><button id="two">2</button></td>
+                    <td><button id="three">3</button></td><td><button id="plus">+</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="window.location.href='https://github.com/RyderBray';" style="font-size: 65px"><i class="fa fa-github"></i></button></td>
+                    <td id="zeroButton"><button>0</button></td>
+                    <td><button id="decimal">.</button></td><td><button id="equal">=</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
