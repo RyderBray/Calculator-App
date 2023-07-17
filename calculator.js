@@ -4,15 +4,23 @@ let clickedValues = [];
 let equation = [];
 let lastInput = null
 
+//To do
+//Commas for thousands, millions, etc
+
 buttons.forEach(function(button) {
     button.addEventListener('click', function() {
         const buttonClick = button.innerHTML;
         const Operators = ["%", "⌫", "c", "=", "x", "÷", "+", "-"]
+        const specialOperators = ["⌫", "c", "="];
         const lastInputType = getLastInputType(equation);
+        const numericValue = parseFloat(buttonClick);
 
-    if (buttonClick === lastInput){
+    if (buttonClick === lastInput) {
         return;
-    }    
+    }
+    else if (equation.length === 18 && !specialOperators.includes(buttonClick)) {
+        return;
+    }
     else if (Operators.includes(buttonClick)) { //Checks for operators
         if (buttonClick === "%") {
             percent();
@@ -49,7 +57,7 @@ buttons.forEach(function(button) {
             }
         }
     }
-    else { //Adds numbers to equation and display
+    else if (!isNaN(numericValue)) { //Adds numbers to equation and display
         clickedValues.push(buttonClick);
         equation.push(buttonClick);
         display.textContent = clickedValues.join("");
